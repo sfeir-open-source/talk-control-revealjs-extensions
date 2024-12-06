@@ -2,8 +2,8 @@ import { html, render } from 'lit-html';
 
 import Reveal from 'reveal.js';
 import RevealHighlight from 'reveal.js/plugin/highlight/highlight.esm';
-import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm';
 import RevealNotes from 'reveal.js/plugin/notes/notes.esm';
+import RevealTalkControlMarkdownPlugin from './tc-marked-plugin';
 import RevealTalkControlThemePlugin from './theme-plugin';
 import RevealZoom from 'reveal.js/plugin/zoom/zoom.esm';
 import { SlidePath } from './models';
@@ -44,7 +44,7 @@ export const ThemeInitializer = {
             pdfMaxPagesPerSlide,
             pdfSeparateFragments,
             plugins: [
-                RevealMarkdown,
+                RevealTalkControlMarkdownPlugin, // We don't use RevealMarkdown because we have to add custom marked extensions
                 RevealTalkControlThemePlugin,
                 RevealZoom,
                 RevealNotes,
@@ -69,14 +69,14 @@ async function defaultSlideRenderer(element: HTMLElement, slides: SlidePath[]) {
     return render(
         html`
             ${slidesToRender.map(
-                (slide) => html`
+            (slide) => html`
                     <section
                         data-markdown="./markdown/${slide.path}"
                         data-separator="##==##"
                         data-separator-vertical="##--##"
                         data-separator-notes="^Notes:"></section>
                 `,
-            )}
+        )}
         `,
         element,
     );

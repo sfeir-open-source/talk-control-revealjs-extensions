@@ -43,6 +43,7 @@
         "feather-icons": "^4.29.2",
         "highlight.js": "^11.10.0",
         "lit": "^3.1.4",
+        "marked": "^4.3.0",
         "reveal.js": "^5.1.0"
     },
     "devDependencies": {
@@ -51,6 +52,7 @@
         "@types/node": "^20.14.9",
         "@types/reveal.js": "^5.0.3",
         "@types/shelljs": "^0.8.15",
+        "@types/marked": "^4.3.0",
         "chokidar-cli": "^3.0.0",
         "eslint": "^9.6.0",
         "globals": "^15.8.0",
