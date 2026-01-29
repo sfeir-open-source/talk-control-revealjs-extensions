@@ -65,6 +65,7 @@ export function postManageMultiplesColumns() {
     }
 
     for (const colSection of allColsSection) {
+        colSection.setAttribute('data-slide-to-remove', 'true');
         colSection.remove(); // We remove the section in order to avoid strange behaviour with fragment or verticals slides
     }
 }

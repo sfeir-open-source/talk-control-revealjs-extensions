@@ -3,6 +3,12 @@
 */
 html.print-pdf {
     .reveal .slides .pdf-page {
+        &:has([data-slide-to-remove]) {
+            // hack to ensure some slides were not visible
+            // - some extras slides added when using multiples cols meanwhile we removed it 🙈
+            display: none !important;
+        }
+
         div.slide-background.quote-slide::before {
             content: '';
             position: absolute;
