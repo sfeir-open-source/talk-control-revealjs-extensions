@@ -1,7 +1,7 @@
 {
     "name": "@talk-control/talk-control-revealjs-extensions",
     "private": false,
-    "version": "1.0.0-rc-3",
+    "version": "1.0.0-rc-5",
     "description": "TalkControl aims to provides an easy to use extensions for anyone wanted to create slides with reveal.js",
     "type": "module",
     "repository": {
