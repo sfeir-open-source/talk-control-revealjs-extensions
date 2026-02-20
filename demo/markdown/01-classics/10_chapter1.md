@@ -269,3 +269,35 @@ A super notes for speaker
 ```
 
 <!-- .element: class="big-code" -->
+
+##==##
+
+# Centered text
+
+## Sometimes you need to center text
+
+<br><br>
+
+### Here is some text centered
+
+<!-- .element: class="center" -->
+
+##--##
+
+<!-- .slide: class="with-code" -->
+
+# Code to produce / Markdown
+
+```markdown
+# Centered text
+
+## Sometimes you need to center text
+
+<br><br>
+
+### Here is some text centered
+
+<!-- .element: class="center" -->
+```
+
+<!-- .element: class="big-code" -->
