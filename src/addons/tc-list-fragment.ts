@@ -3,7 +3,15 @@ export function transformListFragment() {
         ...document.querySelectorAll('.reveal .slides section .list-fragment'),
     ];
     for (const lisItemWithFragmentTag of listItemWithFragments) {
-        let parentOfListItem = lisItemWithFragmentTag.parentElement; // Ul or OL
+        let parentOfListItem: HTMLElement | null =
+            lisItemWithFragmentTag as HTMLElement; // Ul or OL
+        // Special case where we let a space and apply the list-fragment directly on ul or ol
+        if (
+            parentOfListItem?.nodeName !== 'UL' &&
+            parentOfListItem?.nodeName !== 'OL'
+        ) {
+            parentOfListItem = lisItemWithFragmentTag.parentElement; // Ul or OL
+        }
         if (parentOfListItem?.nodeName === 'LI') {
             // Specific case when you have some markdown bold or italic
             parentOfListItem = parentOfListItem.parentElement;

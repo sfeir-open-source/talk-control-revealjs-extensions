@@ -2,4 +2,8 @@ html {
     .custom-img-style {
         filter: grayscale(1);
     }
+
+    .red {
+        color: red;
+    }
 }

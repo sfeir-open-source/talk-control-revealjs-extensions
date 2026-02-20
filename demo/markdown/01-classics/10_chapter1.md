@@ -86,6 +86,12 @@ Some Content
 -   **Item 3**
 <!-- .element: class="list-fragment" -->
 
+1.  Item 1
+1.  Item 2
+1.  Item 3<!-- .element: class="red" -->
+
+<!-- .element: class="list-fragment" -->
+
 ##--##
 
 <!-- .slide: class="with-code" -->
