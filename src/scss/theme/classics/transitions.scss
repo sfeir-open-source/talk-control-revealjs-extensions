@@ -101,7 +101,10 @@
     &[data-background-hash*='Bmp']::after,
     &[data-background-hash*='webp']::after,
     &[data-background-hash*='WEBP']::after,
-    &[data-background-hash*='Webp']::after {
+    &[data-background-hash*='Webp']::after,
+    &[data-background-hash*='avif']::after,
+    &[data-background-hash*='AVIF']::after,
+    &[data-background-hash*='Avif']::after {
         content: '';
         position: absolute;
         top: 0;

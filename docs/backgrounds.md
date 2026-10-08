@@ -27,3 +27,13 @@ This will preserve classes put on the slide element:
 ```
 
 ![](./imgs/background-new-preserve.png)
+
+## AVIF images
+
+The `transition` and `mask` styles of TalkControl support `.avif` backgrounds. However, reveal.js does not yet detect the `avif` extension as an image (see [hakimel/reveal.js#3379](https://github.com/hakimel/reveal.js/issues/3379)), so the `tc-bg` shorthand may not render the image.
+
+Until reveal.js handles it, set the background explicitly with the reveal.js attribute:
+
+```md
+<!-- .slide: data-background-image="./assets/images/background.avif" -->
+```
