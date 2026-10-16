@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation and live demo
+    url: https://talk-control-revealjs-extensions.netlify.app/
+    about: Check the demo and the README before opening an issue, many answers are there.
+  - name: Ask a question
+    url: https://github.com/TalkControl/talk-control-revealjs-extensions#readme
+    about: For usage questions, read the README first; if it is not covered, open a Feature request describing the documentation gap.

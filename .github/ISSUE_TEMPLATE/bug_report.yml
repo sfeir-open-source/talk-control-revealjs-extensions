@@ -1,0 +1,92 @@
+name: Bug report
+description: Something does not work as documented in TalkControl
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+        Please check the [existing issues](https://github.com/TalkControl/talk-control-revealjs-extensions/issues) first.
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Steps to reproduce the behavior. A link to a repository or a StackBlitz is the best reproduction.
+      placeholder: |
+        1. Open the slides with '...'
+        2. Press '...'
+        3. See the error
+    validations:
+      required: true
+  - type: textarea
+    id: markdown-snippet
+    attributes:
+      label: Markdown / HTML of the slide
+      description: The smallest slide source (Markdown or HTML) that triggers the problem.
+      render: markdown
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+  - type: input
+    id: package-version
+    attributes:
+      label: TalkControl version
+      description: Version of `@talk-control/talk-control-revealjs-extensions` (see your `package.json`).
+      placeholder: 1.0.0-rc-5
+    validations:
+      required: true
+  - type: input
+    id: revealjs-version
+    attributes:
+      label: reveal.js version
+      placeholder: 5.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Browsers
+      description: In which browsers do you see the problem?
+      multiple: true
+      options:
+        - Chrome / Chromium / Edge
+        - Firefox
+        - Safari
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser and OS versions
+      placeholder: Firefox 155 on macOS 15
+  - type: dropdown
+    id: usage
+    attributes:
+      label: How do you use TalkControl?
+      options:
+        - ThemeInitializer.init() (bundler / ESM)
+        - Script tag (UMD)
+        - Demo site
+        - Other
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots, console output or logs
+      description: Drag and drop images here, or paste the console output.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context

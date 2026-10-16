@@ -1,0 +1,55 @@
+name: Feature request
+description: Suggest an idea or an improvement for TalkControl
+title: '[Request]: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your idea. Please check the [existing issues](https://github.com/TalkControl/talk-control-revealjs-extensions/issues) first.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your request related to a problem?
+      description: A clear and concise description of the problem you face.
+      placeholder: I am always frustrated when...
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you would like
+      description: What should TalkControl do?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Theme (SCSS / CSS)
+        - Markdown extensions (admonitions, columns, icons, QR code, backgrounds)
+        - Addons (i18n, show type, configuration panel...)
+        - Web components (presentation shell)
+        - Documentation / demo
+        - Other
+  - type: textarea
+    id: example
+    attributes:
+      label: Example of the expected Markdown or HTML
+      description: How would you write it in your slides?
+      render: markdown
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you have considered
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, links to other tools doing it well, etc.
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would be willing to submit a pull request for this feature.

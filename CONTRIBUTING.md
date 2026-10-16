@@ -22,6 +22,10 @@ Summary:
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test|chore
 ```
 
+# Report an issue
+
+Use the issue templates (`.github/ISSUE_TEMPLATE/`): **Bug report** for something that does not work, **Feature request** for an idea. Blank issues are disabled. For a bug, please give the TalkControl and reveal.js versions, your browser, and the smallest Markdown/HTML slide that reproduces it.
+
 # Run Locally
 
 To run the project:
