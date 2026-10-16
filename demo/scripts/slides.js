@@ -9,6 +9,10 @@ import {
 console.log('Reveal version', Reveal.VERSION);
 console.log('Reveal instance', Reveal);
 
+// Exposed for e2e tests (Playwright), which drive navigation through the
+// public Reveal.js API (see e2e/helpers.ts#gotoSlide).
+window.Reveal = Reveal;
+
 // One method per module
 function schoolSlides(showType) {
     const dir = '01-classics';
