@@ -151,6 +151,14 @@ export const _internals =
 
 Strict mode. `ES2020` target. `experimentalDecorators` enabled (required by LitHTML). `noUnusedLocals` and `noUnusedParameters` enforced.
 
+### Architecture decisions
+
+Structuring decisions are recorded as Architecture Decision Records (ADRs) in `docs/adr/`, see [`docs/adr/README.md`](docs/adr/README.md) for the full process.
+
+-   Read `docs/adr/` before reconsidering a structuring choice (a dependency, a public output format, a public API contract, a cross-cutting convention) — the context and trade-offs behind it are likely already recorded.
+-   Create an ADR from [`docs/adr/0000-template.md`](docs/adr/0000-template.md) for any new structuring decision, and add it to the index in the same pull request.
+-   Never edit an **accepted** ADR to reflect a change of mind — create a new ADR that supersedes it instead.
+
 ## AI tooling
 
 This repo ships configuration for several agent tools (Claude Code, Gemini CLI, opencode, `.agents/`-compatible tools). Two rules keep it maintainable:
