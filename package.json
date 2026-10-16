@@ -58,6 +58,8 @@
         "agents:sync": "tsx scripts/sync-agents.ts",
         "agents:check": "tsx scripts/sync-agents.ts --check",
         "test": "vitest",
+        "pree2e": "npm run _prepare-demo",
+        "e2e": "playwright test",
         "_on-change:build": "chokidar \"./src\" -c \"npm run build\"",
         "_on-change:copy": "chokidar \"./dist\" -c \"npm run _prepare-demo\"",
         "_build-watch": "parallelshell \"npm run _on-change:build\" \"npm run _on-change:copy\"",

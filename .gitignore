@@ -133,3 +133,7 @@ dist
 .DS_Store
 
 *.qodo
+
+# Playwright
+test-results/
+playwright-report/

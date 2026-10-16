@@ -28,18 +28,17 @@ jobs:
           npm run agents:check
       - name: Unit Tests
         run: npm test
-      # TODO: setup Playwright tests or remove this 
-      # - name: Install Playwright Browsers
-      #   run: npx playwright install --with-deps
-      # - name: Run Playwright tests
-      #   run: npm run e2e
-      # - name: Keep test report
-      #   uses: actions/upload-artifact@v4
-      #   if: always()
-      #   with:
-      #     name: playwright-report
-      #     path: playwright-report/
-      #     retention-days: 30
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium firefox
+      - name: Run Playwright tests
+        run: npm run e2e
+      - name: Keep test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
       - name: Create release
         if: always()
         env:

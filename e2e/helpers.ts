@@ -27,14 +27,7 @@ export async function waitForDeckReady(page: Page): Promise<void> {
  * @param {number} h horizontal slide index
  * @param {number} v vertical slide index (default 0)
  */
-export async function gotoSlide(
-    page: Page,
-    h: number,
-    v = 0
-): Promise<void> {
+export async function gotoSlide(page: Page, h: number, v = 0): Promise<void> {
     await waitForDeckReady(page);
-    await page.evaluate(
-        ({ h, v }) => window.Reveal.slide(h, v),
-        { h, v }
-    );
+    await page.evaluate(({ h, v }) => window.Reveal.slide(h, v), { h, v });
 }

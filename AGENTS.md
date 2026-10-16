@@ -48,7 +48,11 @@ npm run prettier:fix # Fix formatting
 
 Run a single test file: `npx vitest run src/addons/tc-copy-clipboard.spec.ts`
 
-CI runs `lint` → `prettier` → `agents:check` → `test` on every push to `main` and every PR.
+```bash
+npm run e2e          # Playwright end-to-end tests (Chromium + Firefox), against demo/
+```
+
+CI runs `lint` → `prettier` → `agents:check` → `test` → `e2e` on every push to `main` and every PR.
 
 ## Architecture
 
