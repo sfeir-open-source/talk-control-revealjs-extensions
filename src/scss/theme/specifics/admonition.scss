@@ -1,3 +1,20 @@
+// WCAG AA contrast colors for each admonition type.
+// Each color is defined once here and referenced for both the
+// border-left-color and the :before text color of its type.
+$admonition-note-color: #266bf5;
+$admonition-abstract-color: #236af7;
+$admonition-tip-color: #05836e;
+$admonition-info-color: #0b7e9c;
+$admonition-success-color: #058722;
+$admonition-question-color: #378407;
+$admonition-warning-color: #b75b07;
+$admonition-failure-color: #e90a0a;
+$admonition-danger-color: #e80729;
+$admonition-important-color: #e90a0a;
+$admonition-bug-color: #e70a3d;
+$admonition-example-color: #8153f5;
+$admonition-quote-color: #747474;
+
 .reveal .slides section .admonition {
     border-left: 7px solid black;
     position: relative;
@@ -14,105 +31,105 @@
     }
 
     &.note {
-        border-left-color: #266bf5;
+        border-left-color: $admonition-note-color;
         &:before {
-            color: #266bf5;
+            color: $admonition-note-color;
             content: '📝 Note';
         }
     }
 
     &.abstract {
-        border-left-color: #236af7;
+        border-left-color: $admonition-abstract-color;
         &:before {
-            color: #236af7;
+            color: $admonition-abstract-color;
             content: '📋 Abstract';
         }
     }
 
     &.tip {
-        border-left-color: #05836e;
+        border-left-color: $admonition-tip-color;
         &:before {
-            color: #05836e;
+            color: $admonition-tip-color;
             content: '💡 Tip';
         }
     }
 
     &.info {
-        border-left-color: #0b7e9c;
+        border-left-color: $admonition-info-color;
         &:before {
-            color: #0b7e9c;
+            color: $admonition-info-color;
             content: 'ℹ️ Info';
         }
     }
 
     &.success {
-        border-left-color: #058722;
+        border-left-color: $admonition-success-color;
         &:before {
-            color: #058722;
+            color: $admonition-success-color;
             content: '✅ Success';
         }
     }
 
     &.question {
-        border-left-color: #378407;
+        border-left-color: $admonition-question-color;
         &:before {
-            color: #378407;
+            color: $admonition-question-color;
             content: '? Question';
         }
     }
 
     &.warning {
-        border-left-color: #b75b07;
+        border-left-color: $admonition-warning-color;
         &:before {
-            color: #b75b07;
+            color: $admonition-warning-color;
             content: '⚠️ Warning';
         }
     }
 
     &.failure {
-        border-left-color: #e90a0a;
+        border-left-color: $admonition-failure-color;
         &:before {
-            color: #e90a0a;
+            color: $admonition-failure-color;
             content: '❌ Failure';
         }
     }
 
     &.danger {
-        border-left-color: #e80729;
+        border-left-color: $admonition-danger-color;
         &:before {
-            color: #e80729;
+            color: $admonition-danger-color;
             content: '🔥 Danger';
         }
     }
 
     &.important {
-        border-left-color: #e90a0a;
+        border-left-color: $admonition-important-color;
         &:before {
-            color: #e90a0a;
+            color: $admonition-important-color;
             content: '❗ Important';
         }
     }
 
     &.bug {
-        border-left-color: #e70a3d;
+        border-left-color: $admonition-bug-color;
         &:before {
-            color: #e70a3d;
+            color: $admonition-bug-color;
             content: '🐞 Bug';
         }
     }
 
     &.example {
-        border-left-color: #8153f5;
+        border-left-color: $admonition-example-color;
         &:before {
-            color: #8153f5;
+            color: $admonition-example-color;
             content: '💻 Example';
         }
     }
 
     &.quote {
-        border-left-color: #747474;
+        border-left-color: $admonition-quote-color;
         &:before {
-            color: #747474;
+            color: $admonition-quote-color;
             content: '💬 Quote';
         }
     }
