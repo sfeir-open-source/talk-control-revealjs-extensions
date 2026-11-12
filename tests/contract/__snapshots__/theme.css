@@ -2971,7 +2971,7 @@ z-index:100}
 #tc-configurator-trigger{
 position:fixed;
 bottom:16px;
-right:16px;
+left:16px;
 width:44px;
 height:44px;
 padding:0;

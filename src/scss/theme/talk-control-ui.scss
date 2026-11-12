@@ -16,10 +16,12 @@ tc-configurator-element {
 // until now it could only be opened with the "C" keyboard shortcut.
 //
 // This is a presenter-only control, not meant to be discoverable by a live
-// audience (students, conference attendees): it sits bottom-right (less
-// visually central during a presentation than top-right) and stays faint at
-// rest by default, on purpose - full opacity only on hover/focus-visible,
-// i.e. when someone is actually looking for it or has tabbed onto it.
+// audience (students, conference attendees): it sits bottom-left (out of the
+// way during a presentation, and clear of reveal.js's own default
+// navigation controls/progress bar, which occupy the bottom-right corner)
+// and stays faint at rest by default, on purpose - full opacity only on
+// hover/focus-visible, i.e. when someone is actually looking for it or has
+// tabbed onto it.
 //
 // Accepted trade-off: at this low a resting opacity, the composited color
 // against some slide backgrounds will likely fail WCAG contrast - the
@@ -31,7 +33,7 @@ tc-configurator-element {
 #tc-configurator-trigger {
     position: fixed;
     bottom: 16px;
-    right: 16px;
+    left: 16px;
 
     width: 44px;
     height: 44px;
