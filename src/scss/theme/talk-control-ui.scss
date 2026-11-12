@@ -14,9 +14,23 @@ tc-configurator-element {
 
 // Visible, keyboard-reachable entry point for the configurator (issue #106):
 // until now it could only be opened with the "C" keyboard shortcut.
+//
+// This is a presenter-only control, not meant to be discoverable by a live
+// audience (students, conference attendees): it sits bottom-right (less
+// visually central during a presentation than top-right) and stays faint at
+// rest by default, on purpose - full opacity only on hover/focus-visible,
+// i.e. when someone is actually looking for it or has tabbed onto it.
+//
+// Accepted trade-off: at this low a resting opacity, the composited color
+// against some slide backgrounds will likely fail WCAG contrast - the
+// `talk-control-a11y` CLI (informative only, does not gate CI) may flag a
+// new `color-contrast` violation on this button when scanned at rest. That's
+// intentional: the discreet-by-default requirement and a high-contrast
+// resting state are mutually exclusive, and discreet is the one that was
+// asked for here.
 #tc-configurator-trigger {
     position: fixed;
-    top: 16px;
+    bottom: 16px;
     right: 16px;
 
     width: 44px;
@@ -36,25 +50,31 @@ tc-configurator-element {
     cursor: pointer;
 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.35;
     transition:
+        opacity 0.2s ease,
         background-color 0.2s ease,
         transform 0.2s ease;
 
     z-index: 30;
 
     &:hover {
+        opacity: 1;
         background-color: #005a9e;
         transform: translateY(-1px);
     }
 
     &:focus-visible {
+        opacity: 1;
         outline: 2px solid white;
         outline-offset: 2px;
     }
 
-    // Dimmed by the browser while the configurator dialog is open (it is
-    // then also `inert`, so it can't be activated or reached by Tab).
+    // Dimmed further while the configurator dialog is open (it is then also
+    // `inert`, so it can't be activated or reached by Tab): more muted than
+    // the resting state, to read as "currently unavailable" rather than
+    // just "discreet".
     &[inert] {
-        opacity: 0.5;
+        opacity: 0.2;
     }
 }

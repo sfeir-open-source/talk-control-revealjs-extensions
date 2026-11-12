@@ -2970,7 +2970,7 @@ box-shadow:#37474f 2px 2px 4px 2px;
 z-index:100}
 #tc-configurator-trigger{
 position:fixed;
-top:16px;
+bottom:16px;
 right:16px;
 width:44px;
 height:44px;
@@ -2986,16 +2986,19 @@ font-size:1.2rem;
 line-height:1;
 cursor:pointer;
 box-shadow:0 2px 8px #0000004d;
-transition:background-color .2s ease,transform .2s ease;
+opacity:.35;
+transition:opacity .2s ease,background-color .2s ease,transform .2s ease;
 z-index:30}
 #tc-configurator-trigger:hover{
+opacity:1;
 background-color:#005a9e;
 transform:translateY(-1px)}
 #tc-configurator-trigger:focus-visible{
+opacity:1;
 outline:2px solid white;
 outline-offset:2px}
 #tc-configurator-trigger[inert]{
-opacity:.5}
+opacity:.2}
 /*!
 * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
 * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
